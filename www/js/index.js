@@ -28,6 +28,18 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
+
+
+
+    function locationFound(position) {
+        
+    },
+
+    function locationError(error) {
+        alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+
+    },
+
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
