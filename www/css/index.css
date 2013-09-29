@@ -119,12 +119,12 @@ h1 {
     background-color: #900;
     color: #EEE;
     float: left;
-    width: 40%;
+    width: 50%;
 }
 
 #righthalf {
     background-color: #EEE;
     color: #900;
     float: right;
-    width: 40%;
+    width: 50%;
 }
