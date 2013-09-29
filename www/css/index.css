@@ -57,6 +57,7 @@ body {
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
+    border: 2px solid blue;
 }
 
 /* Landscape layout (with min-width) */
@@ -112,4 +113,18 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+
+#lefthalf {
+    background-color: #900;
+    color: #EEE;
+    float: left;
+    width: 40%;
+}
+
+#righthalf {
+    background-color: #EEE;
+    color: #900;
+    float: right;
+    width: 40%;
 }

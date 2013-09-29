@@ -26,28 +26,8 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        alert('Binding events');
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
-
-
-
-    // locationFound: function(position) {
-    //     var element = document.getElementById('geolocation');
-    //     element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-    //                         'Longitude: '          + position.coords.longitude             + '<br />' +
-    //                         'Altitude: '           + position.coords.altitude              + '<br />' +
-    //                         'Accuracy: '           + position.coords.accuracy              + '<br />' +
-    //                         'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-    //                         'Heading: '            + position.coords.heading               + '<br />' +
-    //                         'Speed: '              + position.coords.speed                 + '<br />' +
-    //                         'Timestamp: '          + position.timestamp                    + '<br />';
-
-    // },
-
-    // locationError: function(error) {
-    //     alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
-    // },
 
     // deviceready Event Handler
     //
@@ -55,27 +35,9 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-
-        // navigator.geolocation.getCurrentPosition(app.locationFound, app.locationError);
-
-        var networkState = navigator.connection.type;
-
-        var states = {};
-        states[Connection.UNKNOWN]  = 'Unknown connection';
-        states[Connection.ETHERNET] = 'Ethernet connection';
-        states[Connection.WIFI]     = 'WiFi connection';
-        states[Connection.CELL_2G]  = 'Cell 2G connection';
-        states[Connection.CELL_3G]  = 'Cell 3G connection';
-        states[Connection.CELL_4G]  = 'Cell 4G connection';
-        states[Connection.CELL]     = 'Cell generic connection';
-        states[Connection.NONE]     = 'No network connection';
-
-        // alert('Connection type: ' + states[networkState]);
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Connection type: ' + states[networkState]
-
-
     },
+
+    
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
