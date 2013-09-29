@@ -31,32 +31,33 @@ var app = {
 
 
 
-    function locationFound(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                            'Longitude: '          + position.coords.longitude             + '<br />' +
-                            'Altitude: '           + position.coords.altitude              + '<br />' +
-                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                            'Heading: '            + position.coords.heading               + '<br />' +
-                            'Speed: '              + position.coords.speed                 + '<br />' +
-                            'Timestamp: '          + position.timestamp                    + '<br />';
+    // function locationFound(position) {
+    //     var element = document.getElementById('geolocation');
+    //     element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+    //                         'Longitude: '          + position.coords.longitude             + '<br />' +
+    //                         'Altitude: '           + position.coords.altitude              + '<br />' +
+    //                         'Accuracy: '           + position.coords.accuracy              + '<br />' +
+    //                         'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+    //                         'Heading: '            + position.coords.heading               + '<br />' +
+    //                         'Speed: '              + position.coords.speed                 + '<br />' +
+    //                         'Timestamp: '          + position.timestamp                    + '<br />';
 
-    },
+    // },
 
-    function locationError(error) {
-        alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+    // function locationError(error) {
+    //     alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
 
-    },
+    // },
 
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        alert('LOL!');
         app.receivedEvent('deviceready');
 
-        navigator.geolocation.getCurrentPosition(app.locationFound, app.locationError);
+        // navigator.geolocation.getCurrentPosition(app.locationFound, app.locationError);
 
     },
     // Update DOM on a Received Event
