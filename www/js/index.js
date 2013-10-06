@@ -29,8 +29,6 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
 
 
-        game = new MyGame();
-        game.startGame();
     },
 
     // deviceready Event Handler
@@ -39,6 +37,9 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        // TODO when uploading for testing on mobile, move this piece of code in the onDeviceReady function
+        game = new MyGame();
+        game.startGame();
     },
 
 
