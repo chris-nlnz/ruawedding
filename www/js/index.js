@@ -27,6 +27,10 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+
+
+        game = new MyGame();
+        game.startGame();
     },
 
     // deviceready Event Handler
@@ -37,7 +41,7 @@ var app = {
         app.receivedEvent('deviceready');
     },
 
-    
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
